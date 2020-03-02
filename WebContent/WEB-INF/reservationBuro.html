@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta charset="ISO-8859-1">
+    <link rel="stylesheet" type="text/css" href="Reservation.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Réservation</title>
+</head>
+
+<body>
+    <div class="body">
+
+        <!-- <div class="gauche"> -->
+        <p class="date">
+            <script>
+                var date = new Date().toLocaleDateString();
+                document.write(date);
+                date.style.fontFamily = "Impact,Helvetica, sans-serif";
+            </script>
+
+        </p>
+        <!-- </div> -->
+        <!-- <div class="droite">
+            <h1>Réservez la salle <em>Buro</em> !</h1>
+
+            <form action="post">
+                <div class="champdesaisideformulaire"><label for="Nom"> Nom Prenom:</label> <input type="text" pattern="[a-zA-Z].{2,17}" title="Saisir entre 3 et 18 lettres majuscules ou minuscules!" name="Nom" required></div> -->
+
+        <!-- <div><label for="Prenom"> Pr�nom:</label> <input
+				type="text" name="Prenom" pattern="[a-zA-Z].{2,17}"
+				title="Saisir entre 3 et 18 lettres majuscules ou minuscules!" required></div> -->
+
+        <!-- <div><label for="telephone"> Tél:<input type="tel" name="telephone" id="telephone" pattern="[0-9].{9}" title="Dix chiffres!" required></label>
+                </div>
+
+                <div><label for="Prenom"> Mail:</label><input type="text" name="email" placeholder="exemple@cote-azur.cci.fr" pattern="\b[a-z0-9._%+-]" width=100px title="exemple@cote-azur.cci.fr" required /></div>
+
+                <div><label for="date"> @cote-azur.cci.fr   Date:</label><input type="date" name="calendrier"></div>
+
+                <div><label for="heuredebut"> De:</label><input type="time" name="heuredebut"></div>
+                <div><label for="heurefin"> à:</label><input type="time" name="heurefin"></div>
+                <div class="bas">
+                    <input class=boutton type="submit" value="Réserver">
+                    <input id="boutton1" class=boutton type="submit" value="Réserver un autre horaire">
+                    <input id="boutton2" class=boutton type="submit" value="Réserver une autre salle">
+                </div>
+		</div> -->
+
+        <div id="date"><label for="week">Date:</label><input type="date" name="week"></div>
+
+
+
+        <section id="week">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col"> </th>
+                        <th scope="col">8h</th>
+                        <th scope="col">9h</th>
+                        <th scope="col">10h</th>
+                        <th scope="col">11h</th>
+                        <th scope="col">12h</th>
+                        <th scope="col">13h</th>
+                        <th scope="col">14h</th>
+                        <th scope="col">15h</th>
+                        <th scope="col">16h</th>
+                        <th scope="col">17h</th>
+                        <th scope="col">18h</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Lundi</th>
+                        <td id="demo" onclick="myFunction()">A </td>
+                        <td id="demo1" ondblclick="myFunction()" onclick="myFunction1()"></td>
+                        <td>R</td>
+                        <td>C</td>
+                        <td>C</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Mardi</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Mercredi</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Jeudi</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Vendredi</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </section>
+
+    </div>
+
+    <!-- <a href="reservationBuro.html"> Réserver une autre salle</a> -->
+
+
+
+
+   
+    <script>
+        function myFunction() {
+
+            document.getElementById("demo").style.backgroundColor = "red";
+
+        }
+
+        $(document).ready(function() {
+            $("td").dblclick(function() {
+                document.getElementById("demo").style.backgroundColor = "rgb(70, 248, 76)";
+
+            });
+        });
+
+
+
+        function myFunction1() {
+            document.getElementById("demo1").style.backgroundColor = "red";
+        }
+
+        function myFunction1() {
+            document.getElementById("demo1").style.color = "red";
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
